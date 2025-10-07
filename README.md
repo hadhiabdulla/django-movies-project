@@ -149,7 +149,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-**Hadhi Abdullah**
+**Hadhi Abdulla**
 - GitHub: [@hadhiabdulla](https://github.com/hadhiabdulla)
 
 ## 🙏 Acknowledgments
