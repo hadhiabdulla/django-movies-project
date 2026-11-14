@@ -60,7 +60,11 @@ pip install django djangorestframework psycopg2-binary python-decouple
 
 ### 4. Database Setup
 1. Create a PostgreSQL database named `movies_db`
-2. Update the `.env` file with your database credentials:
+2. Copy the example environment file and fill in your own values:
+```bash
+cp .env.example .env
+```
+`.env` is listed in `.gitignore`, so your real credentials stay out of git. The committed defaults (`movies_db`, `admin` / `admin`, `localhost:5432`) are for local development only - never use them anywhere real.
 ```env
 SECRET_KEY=your-secret-key-here
 DEBUG=True
@@ -115,7 +119,8 @@ django-movies-project/
 │   ├── settings.py        # Django settings
 │   ├── urls.py            # Main URL configuration
 │   └── wsgi.py            # WSGI configuration
-├── .env                   # Environment variables
+├── .env.example          # Template for local environment variables
+├── .gitignore             # Keeps .env, bytecode and build artifacts out of git
 ├── manage.py              # Django management script
 └── README.md              # Project documentation
 ```
@@ -123,7 +128,7 @@ django-movies-project/
 ## 🔧 Configuration
 
 ### Environment Variables
-Create a `.env` file in the project root with the following variables:
+Copy `.env.example` to `.env` in the project root and fill in your own values:
 
 ```env
 SECRET_KEY=your-django-secret-key
