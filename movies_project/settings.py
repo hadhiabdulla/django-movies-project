@@ -79,11 +79,13 @@ WSGI_APPLICATION = 'movies_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
+        # Defaults match the documented local dev setup in .env.example;
+        # set real values in your own (gitignored) .env file.
+        'NAME': config('DB_NAME', default='movies_db'),
+        'USER': config('DB_USER', default='admin'),
+        'PASSWORD': config('DB_PASSWORD', default='admin'),
+        'HOST': config('DB_HOST', default='localhost'),
+        'PORT': config('DB_PORT', default='5432'),
     }
 }
 
