@@ -1,0 +1,22 @@
+# Local environment configuration - never commit real values
+.env
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# Local databases
+db.sqlite3
+
+# Django collectstatic / media output
+staticfiles/
+media/
+
+# Editor and OS noise
+.vscode/
+.idea/
+.DS_Store
